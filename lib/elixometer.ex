@@ -185,7 +185,7 @@ defmodule Elixometer do
     {:ok, %Config{table_name: table_name}}
   end
 
-  def start_link do
+  def start_link(_state) do
     GenServer.start_link(__MODULE__, :ok, name: __MODULE__)
   end
 

@@ -17,8 +17,8 @@ defmodule Elixometer.Updater do
     {:ok, %{formatter: formatter}}
   end
 
-  def start_link do
-    GenServer.start_link(__MODULE__, [], name: __MODULE__)
+  def start_link(state) do
+    GenServer.start_link(__MODULE__, state, name: __MODULE__)
   end
 
   def timer(name, units, elapsed) do
